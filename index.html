@@ -3,43 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/40dd2f1e0a.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/40dd2f1e0a.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/style.css" />
 
     <title>World Clock</title>
   </head>
-  <body>
-    
+  <body
+    style="
+      background-image: url('images/artur-voznenko-aDG7m4m7fb4-unsplash.jpg');
+    "
+    ;
+  >
+    <div class="select-container">
       <select name="cities" id="cities">
-      <option value="">Select a city</option>
-      <option value="madrid">Madrid</option>
-      <option value="london">london</option>
-      <option value="rome">Rome</option>
+        <option value="">Select a city</option>
+        <option value="madrid">Madrid</option>
+        <option value="london">london</option>
+        <option value="rome">Rome</option>
       </select>
-      <div>
-      <span class="fa-regular fa-clock"></span>
-      <h2>World Clock</h1>
+    </div>
+    <div class="container">
+      <div class="main-heading">
+        <h2>
+          <span class="fa-regular fa-clock clock-image"></span>World Clock
+        </h2>
       </div>
+      <div class="list-container">
+        <ul class="city-grid">
+          <li class="city-name">Sydney</li>
+          <li class="time">8:20:12 PM</li>
+          <li class="date">June 27th 2023</li>
+        </ul>
+        <hr />
 
-      <div class="city">
-        <h3>Sydney</h3>
-        <div class="date">June 27th 2023</div>
-        <div class="time">8:20:12 PM</div>
-      </div>
+        <ul class="city-grid">
+          <li class="city-name">Montevideo</li>
+          <li class="time">8:20:12 PM</li>
+          <li class="date">June 27th 2023</li>
+        </ul>
+        <hr />
 
-      <div class="city">
-        <h3>Montevideo</h3>
-        <div class="date">June 27th 2023</div>
-        <div class="time">8:20:12 PM</div>
+        <ul class="city-grid">
+          <li class="city-name">Abuja</li>
+          <li class="time">8:20:12 PM</li>
+          <li class="date">June 27th 2023</li>
+        </ul>
       </div>
-
-      <div class="city">
-        <h3>Abuja</h3>
-        <div class="date">June 27th 2023</div>
-        <div class="time">8:20:12 PM</div>
-      </div>
-      
-      <footer>
+    </div>
+    <footer>
       <a href="https://github.com/Esgagos/World_clock" target="_blank">
         Open-source code on gitHub</a
       >
