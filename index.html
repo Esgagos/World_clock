@@ -8,7 +8,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="css/style.css" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock</title>
   </head>
   <body
@@ -21,7 +22,7 @@
       <select name="cities" id="cities">
         <option value="">Select a city</option>
         <option value="madrid">Madrid</option>
-        <option value="london">london</option>
+        <option value="london">London</option>
         <option value="rome">Rome</option>
       </select>
     </div>
@@ -34,22 +35,22 @@
       <div class="list-container">
         <ul class="city-grid">
           <li class="city-name">Sydney 🇦🇺</li>
-          <li class="time">8:20:12 <small> PM</small></li>
-          <li class="date">June 27th 2023</li>
+          <li class="time" id="sydneyTime"><small></small></li>
+          <li class="date" id="sydneyDate"></li>
         </ul>
         <hr />
 
         <ul class="city-grid">
           <li class="city-name">London 🇬🇧</li>
-          <li class="time">8:20:12<small> PM</small></li>
-          <li class="date">June 27th 2023</li>
+          <li class="time" id="londonTime"><small></small></li>
+          <li class="date" id="londonDate"></li>
         </ul>
         <hr />
 
         <ul class="city-grid">
           <li class="city-name">Madrid 🇪🇸</li>
-          <li class="time">8:20:12 <small> PM</small></li>
-          <li class="date">June 27th 2023</li>
+          <li class="time" id="madridTime"><small></small></li>
+          <li class="date" id="madridDate"></li>
         </ul>
       </div>
     </div>
