@@ -13,7 +13,7 @@ select {
 }
 h2 {
   color: #808f8e;
-  font-size: 19px;
+  font-size: 23px;
   background-color: #cbebc9;
   padding: 15px;
   border-radius: 10px;
@@ -76,4 +76,6 @@ a {
 }
 .time {
   margin-top: 5px;
+  font-weight: 600;
+  font-size: 35px;
 }
