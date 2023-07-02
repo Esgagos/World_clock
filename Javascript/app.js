@@ -1,4 +1,4 @@
-setInterval(function () {
+function updateTime() {
   // sydney
   const sydneyDateElement = document.querySelector("#sydneyDate");
   const sydneyTimeElement = document.querySelector("#sydneyTime");
@@ -19,4 +19,26 @@ setInterval(function () {
   const madridDate = moment().tz("Europe/Madrid");
   madridDateElement.innerHTML = madridDate.format("MMMM Do YYYY");
   madridTimeElement.innerHTML = madridDate.format("H:m:s [<small>]A[</small>]");
-}, 1000);
+}
+
+function updateCity(event) {
+  const city = event.target.value;
+  const cityName = city.replace("_", " ").split("/")[1];
+  const cityDate = moment().tz(city).format("MMMM Do YYYY");
+  const cityTime = moment().tz(city).format("H:m:s [<small>]A[</small>]");
+
+  let listContainerElement = document.querySelector("#list-container");
+  console.log(listContainerElement);
+  listContainerElement.innerHTML = `<div class="list-container" id="list-container">
+    <ul class="city-grid">
+          <li class="city-name">${cityName}</li>
+          <li class="time">${cityTime}<small></li>
+          <li class="date">${cityDate}</li>
+        </ul>
+        <hr />
+    </div>`;
+}
+updateTime();
+setInterval(updateTime, 1000);
+let selectCity = document.querySelector("#cities");
+let city = selectCity.addEventListener("change", updateCity);
