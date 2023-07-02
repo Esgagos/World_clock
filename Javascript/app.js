@@ -39,7 +39,8 @@ function updateCity(event) {
           <li class="date">${cityDate}</li>
         </ul>
         <hr />
-    </div>`;
+    </div>
+    <a href="/" class="link-homepage">Back to homepage</a>`;
 }
 updateTime();
 setInterval(updateTime, 1000);
