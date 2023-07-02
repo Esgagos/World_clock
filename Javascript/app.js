@@ -22,13 +22,16 @@ function updateTime() {
 }
 
 function updateCity(event) {
-  const city = event.target.value;
+  let city = event.target.value;
+  if (city === "current") {
+    city = moment.tz.guess();
+    console.log(city);
+  }
   const cityName = city.replace("_", " ").split("/")[1];
   const cityDate = moment().tz(city).format("MMMM Do YYYY");
   const cityTime = moment().tz(city).format("H:m:s [<small>]A[</small>]");
 
   let listContainerElement = document.querySelector("#list-container");
-  console.log(listContainerElement);
   listContainerElement.innerHTML = `<div class="list-container" id="list-container">
     <ul class="city-grid">
           <li class="city-name">${cityName}</li>
